@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func getRepeatCharIndex(str string) int {
-	hMap := make(map[int32]int)
+	hMap := make(map[int32]int, len(str))
 	for i, c := range str {
 		hMap[c-'a']++
 		fmt.Printf("   过程1: %d,%d,%d \n\n", hMap[c], c, i)
